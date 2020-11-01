@@ -8,4 +8,6 @@ if [ -d $HOME/.profile.d ]; then
   unset i
 fi
 
+gpgconf --create-socketdir 
+
 source ~/.dotfiles/alias

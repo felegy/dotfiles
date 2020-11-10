@@ -1,0 +1,2 @@
+echo "Performing cleanup..."
+[[ ! -z "${SSH_CONNECTION}" ]] && find /run/user/$UID/gnupg -type s -exec rm -rf {} \;

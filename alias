@@ -1,7 +1,8 @@
 alias dotnet-install="$HOME/.dotnet/dotnet-install.sh"
 alias d="docker"
 alias g="git"
-#alias gdm="git diff $$(git merge-base master $$(git rev-parse --abbrev-ref HEAD))..$$(git rev-parse --abbrev-ref HEAD)"
+# When login over ssh eliminate gpg agent autostart
+[[ ! -z "${SSH_CONNECTION}" ]] && alias gpg="gpg --no-autostart"
 alias h="heroku"
 alias l="lando"
 alias n="node"

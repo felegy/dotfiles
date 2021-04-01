@@ -4,7 +4,7 @@ This guide is also available in [HUN](README_HUN.md)
 
 ## Set Hostname
 
-Enter to Terminal App: `cmd + space` és `terminal`.
+Enter to Terminal App: `cmd + space` and `terminal`.
 
 ```bash
 $ sudo scutil --set ComputerName <hostname>

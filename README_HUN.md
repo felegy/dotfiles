@@ -6,7 +6,9 @@
 
 ## Set Hostname
 
-Enter to Terminal App: `cmd + space` és `terminal`.
+Mivel a első telepítés (gyári mód) alapvetően a felhasználók és nem a fejlesztők ígényeire van hangolva és az újabb OS verziókban nem is nagyon lehet a custom telepítési módokat alkalmazni ezért a kész telepítés után kell kézzel megcsinálni mindent, pl. a mindenféle cirkalmas hostnév helyett (amit az OS a felhasználó neve alapján generál) kézzel kell olyan hostnevet beállítani ami nem tartalmaz speciális karaktereket.
+
+El kell indítani a Terminal app-ot: `cmd + space` és `terminal`.
 
 ```bash
 $ sudo scutil --set ComputerName <hostname>
@@ -15,7 +17,9 @@ $ sudo scutil --set LocalHostName <hostname>
 
 
 
-## Energisveing and security settings
+## Energiatakarékossági és Biztonsági beállítások
+
+Itt még ki lehet térni a teljes drive titkosításra is, de én nem használom a teljes drive titkosítást mert jelnősen lassítja az OS-t és én inkább a win-win megközelítést próbálom alkalmazni, amikor is a drive nincs titkosítva, hanem az érzékeny adataim titkosítását külön oldom (és erre szigorúan ügyelek) meg ott alkalmazok titkosítást ahol indokolt és inkább arra törekszem, hogy nem hagyom őrizetlenül a gépemet, hogy ne férhessen hozzá rajtam kívül más. A lenti beállítésok ahhoz kellenek, hogy a gépen a tűzfal és az energiakezelés megfelelően legyen beállítva, mert pl. az alap beállítás esetén a credential-okat is kiírja az OS a diskre memóriából és emellett még lassan is működik, így mindkét szempontból érdemes ezeket elvégezni: 
 
 ```bash
 $ sudo pmset -a destroyfvkeyonstandby 1
@@ -41,7 +45,7 @@ $ find /var/db/com.apple.xpc.launchd/ -type f -print -exec defaults read {} \; 2
 
 
 
-## Brew and applications install
+## Brew és az alkalmazások beállítása
 
 ```bash
 $  mkdir ~/.homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C ~/.homebrew
@@ -65,8 +69,6 @@ brew install --cask google-chrome # Sima Chrome
 ```
 
 
-
-## Setup dot files
 
 ```bash
 # Clone this repo to ~/.dotfiles
@@ -149,7 +151,7 @@ unsupported configuration.
 
 
 
-## Install PHP and Node
+
 
 ```bash
 brew install php@7.4
@@ -172,7 +174,7 @@ ln -sn ~/.dotfiles/profile.d/mysql-client.sh ~/.profile.d/120-mysql-client.sh
 
 
 
-## Install Lando and Heroku-cli
+
 
 ```
 brew install lando

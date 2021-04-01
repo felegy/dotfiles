@@ -1,5 +1,5 @@
 case $(uname) in
-    Darwin) BREW_DIR=$HOME/homebrew;;
+    Darwin) BREW_DIR=$HOME/.homebrew;;
     *)      BREW_DIR=/home/linuxbrew/.linuxbrew;;
 esac
 

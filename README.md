@@ -1,6 +1,4 @@
-<p style="text-align:right;"><a href="README_HUN.md">HUN</a></p>
-
-# Mac DevEnv install
+# Mac DevEnv install <a href="README_HUN.md" align="right">HUN</a>
 
 
 

@@ -15,7 +15,7 @@ $ sudo scutil --set LocalHostName <hostname>
 
 
 
-## Energisveing and security settings
+## Energy saveing and security settings
 
 ```bash
 $ sudo pmset -a destroyfvkeyonstandby 1

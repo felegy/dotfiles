@@ -1,4 +1,4 @@
-<a href="README_HUN.md" align="right">HUN</a>
+<a href="README_HUN.md" style="text-align:right;">HUN</a>
 
 # Mac DevEnv install
 

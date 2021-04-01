@@ -1,6 +1,6 @@
-# Mac DevEnv install <span align="right"><a href="README_HUN.md">HUN</a></span>
+# Mac DevEnv install
 
-
+This guide is also available in <a href="README_HUN.md">HUN</a>
 
 ## Set Hostname
 

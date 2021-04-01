@@ -1,4 +1,4 @@
-
+<a href="README_HUN.md" align="right">HUN</a>
 
 # Mac DevEnv install
 
@@ -66,7 +66,7 @@ brew install --cask google-chrome # Sima Chrome
 
 
 
-## Setup dot files
+## Setup dotfiles
 
 ```bash
 # Clone this repo to ~/.dotfiles

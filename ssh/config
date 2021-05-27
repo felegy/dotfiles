@@ -1,0 +1,19 @@
+Host fusion.hvg.hu
+  Port 443
+  ForwardAgent yes
+  LocalForward 3388 172.16.97.125:3389
+  LocalForward 9000 172.16.197.41:9000
+  LocalForward 8006 172.16.197.1:8006
+
+Host debian-dev
+  HostName 192.168.10.30
+  IdentityFile ~/.ssh/debian-dev_rsa
+  ForwardAgent yes
+  RemoteForward /run/user/1000/gnupg/S.gpg-agent 127.0.0.1:4321
+
+Host pve1.solair.systems
+  ProxyCommand cloudflared access ssh --hostname %h
+  
+Host pve2.solair.systems
+  ProxyCommand cloudflared access ssh --hostname %h
+  

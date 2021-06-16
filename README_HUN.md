@@ -2,8 +2,6 @@
 
 # Mac DevEnv install
 
-
-
 ## Set Hostname
 
 Mivel a első telepítés (gyári mód) alapvetően a felhasználók és nem a fejlesztők ígényeire van hangolva és az újabb OS verziókban nem is nagyon lehet a custom telepítési módokat alkalmazni ezért a kész telepítés után kell kézzel megcsinálni mindent, pl. a mindenféle cirkalmas hostnév helyett (amit az OS a felhasználó neve alapján generál) kézzel kell olyan hostnevet beállítani ami nem tartalmaz speciális karaktereket.
@@ -14,9 +12,6 @@ El kell indítani a Terminal app-ot: `cmd + space` és `terminal`.
 $ sudo scutil --set ComputerName <hostname>
 $ sudo scutil --set LocalHostName <hostname>
 ```
-
-
-
 ## Energiatakarékossági és Biztonsági beállítások
 
 Itt még ki lehet térni a teljes drive titkosításra is, de én nem használom a teljes drive titkosítást mert jelnősen lassítja az OS-t és én inkább a win-win megközelítést próbálom alkalmazni, amikor is a drive nincs titkosítva, hanem az érzékeny adataim titkosítását külön oldom (és erre szigorúan ügyelek) meg ott alkalmazok titkosítást ahol indokolt és inkább arra törekszem, hogy nem hagyom őrizetlenül a gépemet, hogy ne férhessen hozzá rajtam kívül más. A lenti beállítésok ahhoz kellenek, hogy a gépen a tűzfal és az energiakezelés megfelelően legyen beállítva, mert pl. az alap beállítás esetén a credential-okat is kiírja az OS a diskre memóriából és emellett még lassan is működik, így mindkét szempontból érdemes ezeket elvégezni: 
@@ -43,8 +38,6 @@ $ sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.apsd.plist
 $ find /var/db/com.apple.xpc.launchd/ -type f -print -exec defaults read {} \; 2>/dev/null
 ```
 
-
-
 ## Brew és az alkalmazások beállítása
 
 ```bash
@@ -67,8 +60,6 @@ brew install --cask chromium      # opensource Chrome en ezen fejlesztek
 unset HOMEBREW_CASK_OPTS					# a Chrome csomagnak nincs jelenleg SHA hash-e
 brew install --cask google-chrome # Sima Chrome 
 ```
-
-
 
 ```bash
 # Clone this repo to ~/.dotfiles
@@ -126,8 +117,6 @@ git config --global user.signingkey $KEY_ID
 
 ```
 
-
-
 ```bash
 $ brew doctor
 
@@ -149,10 +138,6 @@ unsupported configuration.
 
 ```
 
-
-
-
-
 ```bash
 brew install php@7.4
 brew install composer
@@ -172,10 +157,6 @@ brew install mysql-client
 ln -sn ~/.dotfiles/profile.d/mysql-client.sh ~/.profile.d/120-mysql-client.sh
 ```
 
-
-
-
-
 ```
 brew install lando
 
@@ -185,4 +166,3 @@ ln -sn ~/.dotfiles/profile.d/heroku.sh ~/.profile.d/130-heroku.sh
 
 heroku autocomplete --refresh-cache
 ```
-

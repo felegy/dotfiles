@@ -16,4 +16,3 @@ Host pve1.solair.systems
   
 Host pve2.solair.systems
   ProxyCommand cloudflared access ssh --hostname %h
-  

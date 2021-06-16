@@ -1,5 +1,6 @@
 alias dotnet-install="$HOME/.dotnet/dotnet-install.sh"
 alias d="docker"
+alias dc="docker-compose"
 alias g="git"
 # When login over ssh eliminate gpg agent autostart
 [[ ! -z "${SSH_CONNECTION}" ]] && alias gpg="gpg --no-autostart"
